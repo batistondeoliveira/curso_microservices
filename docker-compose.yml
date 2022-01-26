@@ -128,7 +128,7 @@ services:
       SPRING.DATASOURCE.PASSWORD: infor
       SPRING.FLYWAY.URL: jdbc:mysql://book-db:3309/book_service?useSSL=false&serverTimezone=UTC&enabledTLSProtocols=TLSv1.2
       SPRING.FLYWAY.USER: root
-      SPRING.FLYWAY.PASSWORD: infor	      
+      SPRING.FLYWAY.PASSWORD: infor
     ports:
       - 8100:8100
     depends_on:
@@ -137,7 +137,7 @@ services:
       - rabbit-mq
     networks:
       - eliel-network
-      
+
 networks:
   eliel-network:
-    driver: bridge  
+    driver: bridge
