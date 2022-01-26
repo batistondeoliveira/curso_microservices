@@ -100,7 +100,7 @@ services:
       SPRING.DATASOURCE.PASSWORD: infor
       SPRING.FLYWAY.URL: jdbc:mysql://cambio-db:3308/cambio_service?useSSL=false&serverTimezone=UTC&enabledTLSProtocols=TLSv1.2
       SPRING.FLYWAY.USER: root
-      SPRING.FLYWAY.PASSWORD: infor	      
+      SPRING.FLYWAY.PASSWORD: infor
     ports:
       - 8000:8000
     depends_on:
