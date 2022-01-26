@@ -1,0 +1,14 @@
+package br.com.eliel.controller;
+
+@RequestController
+@RequestMapping("book-service")
+public class BookController {
+
+	@GetMapping(value = "{id}/{currency}")
+	public Book findBook(
+			@PathVariable("id") Long id,
+			@PathVariable("currency") Stringh currency,
+			) {
+		return new Book();
+	}
+}

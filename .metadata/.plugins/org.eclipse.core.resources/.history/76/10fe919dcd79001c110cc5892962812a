@@ -1,0 +1,13 @@
+package br.com.eliel.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/cambio-service")
+public class CambioController {
+
+	public Cambio getCambio() {
+		return new Cambio();
+	}
+}

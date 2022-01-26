@@ -1,0 +1,9 @@
+package br.com.eliel.configuration;
+
+@Configuration
+public class OpenApiConfiguration {
+
+	public List<GroupOpenApi> apis() {
+		return new ArrayList<>();
+	}
+}

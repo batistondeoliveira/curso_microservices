@@ -1,0 +1,3 @@
+spring:  application:    name: eliel-config-server
+server:
+  port: 8888

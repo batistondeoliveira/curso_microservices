@@ -1,0 +1,14 @@
+package br.com.eliel.configuration;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class OpenApiConfiguration {
+
+	public List<GroupedOpenApi> apis() {
+		return new ArrayList<>();
+	}
+}

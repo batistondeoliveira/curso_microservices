@@ -1,0 +1,9 @@
+package br.com.eliel.configuration;
+
+@OpenAPIDefinition(info =
+@Info(title = "Book Service API", )
+	version = "v1",
+	description = "Documentation of Book Service API"))
+public class OpenApiConfiguration {
+
+}

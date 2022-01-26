@@ -1,0 +1,25 @@
+package br.com.eliel.controller;
+
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import br.com.eliel.exception.UnsuportedMathOperationException;
+import br.com.eliel.math.SimpleMath;
+import br.com.eliel.request.converters.NumberConvert;
+
+@RestController
+@RequestMapping("/person")
+public class PersonController {		
+	
+	@RequestMapping(value="/{id}", method=RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
+	public Double findById(@PathVariable("id") String id) {
+		if (!NumberConvert.isNumeric(id) || !NumberConvert.isNumeric(numberTwo)) {
+			throw new UnsuportedMathOperationException("Please set a numeric value");
+		}		
+		
+		return math.sum(NumberConvert.convertToDouble(id), NumberConvert.convertToDouble(numberTwo));
+	}	
+}

@@ -1,0 +1,15 @@
+package br.com.eliel.configuration;
+
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+
+@OpenAPIDefinition(info =
+@Info(title = "Book Service API", )
+	version = "v1",
+	description = "Documentation of Book Service API"))
+public class OpenApiConfiguration {
+
+	@Bean
+	public OpenAPI customOpenAPI() {
+		
+	}
+}

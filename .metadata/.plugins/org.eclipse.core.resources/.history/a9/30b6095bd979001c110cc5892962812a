@@ -1,0 +1,20 @@
+package br.com.eliel.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import br.com.eliel.model.Book;
+
+@RequestController
+@RequestMapping("book-service")
+public class BookController {
+
+	@GetMapping(value = "{id}/{currency}")
+	public Book findBook(
+			@PathVariable("id") Long id,
+			@PathVariable("currency") Stringh currency
+			) {
+		return new Book();
+	}
+}

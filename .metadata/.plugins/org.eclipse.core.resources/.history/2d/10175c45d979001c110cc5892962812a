@@ -1,0 +1,11 @@
+package br.com.eliel.controller;
+
+@RequestController
+@RequestMapping("book-service")
+public class BookController {
+
+	public Book findBook(
+			) {
+		return new Book();
+	}
+}

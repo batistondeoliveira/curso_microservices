@@ -1,0 +1,11 @@
+package br.com.eliel.configuration;
+
+import org.springframework.stereotype.Component;
+
+@Component
+@ConfigurationProperties("greeting-service")
+public class GreetingConfiguration {
+	
+	private String greenting;
+	private String defaultValue;
+}

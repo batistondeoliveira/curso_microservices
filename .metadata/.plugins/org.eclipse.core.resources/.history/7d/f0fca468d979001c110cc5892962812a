@@ -1,0 +1,33 @@
+package br.com.eliel.controller;
+
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import br.com.eliel.model.Book;
+
+@RequestController
+@RequestMapping("book-service")
+public class BookController {
+
+	@GetMapping(value = "{id}/{currency}")
+	public Book findBook(
+			@PathVariable("id") Long id,
+			@PathVariable("currency") Stringh currency
+			) {
+		var cambio = repository.findByFromAndTo(from, to);
+		if (cambio == null) throw new RuntimeException("Currency Unsupported");
+		
+		var port = environment.getProperty("local.server.port");
+		BigDecimal convertionFactor = cambio.getConversionFactor();
+		BigDecimal convertedValue = convertionFactor.multiply(amount);
+		
+		cambio.setConvertedValue(convertedValue.setScale(2,RoundingMode.CEILING));
+		cambio.setEnvironment(port);
+		
+		return new Book();
+	}
+}
